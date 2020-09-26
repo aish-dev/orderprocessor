@@ -2,6 +2,8 @@
 
 Sample JSON for order details, line items and order summary and status.
 
+
+```
 {
     "customerDetails" : {
     "customerId" : 1396,
@@ -15,12 +17,13 @@ Sample JSON for order details, line items and order summary and status.
     "orderTotal" : "1453",
     "paymentInfo" : {
       "paymentMethod" : "NetBanking",
-      "billingAddress" : "59 West 46th Street, New York City, NY 10036"
+      "billingAddress" : "No. 8 Bazaar Lane , Mylapore,Chennai - 600 004"
     },
-    "shippingAddress" : "59 West 46th Street, New York City, NY 10036"
+    "shippingAddress" : "No. 8 Bazaar Lane , Mylapore,Chennai - 600 004"
   },
   
-  "lineItems" : [
+  "lineItems" : 
+  [
     { 
       "itemNo" : 1,
       "itemId" : "156",
@@ -32,22 +35,23 @@ Sample JSON for order details, line items and order summary and status.
       "itemNo" : 2,
       "itemId" : "137",
       "itemName" : "SRT Shampoo",
-      "itemPrice" : "400"
+      "itemPrice" : "500"
       
     }
     ],
    
   "orderSummary" : {
-    "itemsTotalPrice" : "800.00",
+    "itemsTotalPrice" : "900.00",
     "packingCost" : "0.00",
-    "totalBeforeTax" : "800.00",
+    "totalBeforeTax" : "900.00",
     "tax" : "75",
-    "total" : "875"
+    "total" : "975"
   },
   
   "orderStatus" : {
-      "orderRequestId" : "111",
+      "orderRequestId" : "134",
       "orderRequestStatus" : "submitted"
   }
   
 }
+```
