@@ -1,4 +1,10 @@
-# orderprocessing API to process the order details and to get order status.
+# orderprocessing API 
+    
+Functionalities:
+- Pushes the initial order details to message queue and creates a record in redis dB.
+- Order Status corresponding to an order is updated and pushed to the queue.
+- A consumer processes the order message (order status update) in the queue and simultaneously updates the status to redis DB.
+- GET APis helps to fetch the order status corresponding to an order request ID (or the tracking ID).
 
 Sample JSON for order details, line items and order summary and status.
 
@@ -55,3 +61,11 @@ Sample JSON for order details, line items and order summary and status.
   
 }
 ```
+
+|   HTTP Verb   |      URL                                                       |   Description                                                                 |
+| ------------- | -------------                                                  |-------------------------------------------------------------------------------|
+|     `GET`     | http://localhost:8082/orders/get/order/status/{orderRequestId} | Obtains order status corresponding to the provided order request ID.          |
+|     `GET`     |    http://localhost:8082/orders/fetchorder/{orderRequestId}    | Obtains all the order details corresponding to the provided order request ID. |
+|    `POST`     |         http://localhost:8082/orders/publish/order             | Publishes the orderdetails to kafka and stores the details in Redis DB.       |
+|   `PATCH`     |       http://localhost:8082/orders/order/update/status         | Update the order status in Kafka                                              | 
+
