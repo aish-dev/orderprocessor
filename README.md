@@ -63,9 +63,9 @@ Sample JSON for order details, line items and order summary and status.
 ```
 
 |   HTTP Verb   |      URL                                                       |   Description                                                                 |
-| ------------- | -------------                                                  |-------------------------------------------------------------------------------|
-|     `GET`     | http://localhost:8082/orders/get/order/status/{orderRequestId} | Obtains order status corresponding to the provided order request ID.          |
-|     `GET`     |    http://localhost:8082/orders/fetchorder/{orderRequestId}    | Obtains all the order details corresponding to the provided order request ID. |
-|    `POST`     |         http://localhost:8082/orders/publish/order             | Publishes the orderdetails to kafka and stores the details in Redis DB.       |
-|   `PATCH`     |       http://localhost:8082/orders/order/update/status         | Update the order status in Kafka                                              | 
+| ------------- | ---------------------------------------------------------------|-------------------------------------------------------------------------------|
+|     `GET`     |`http://localhost:8082/orders/get/order/status/{orderRequestId}`| Obtains order status corresponding to the provided order request ID.          |
+|     `GET`     |   `http://localhost:8082/orders/fetchorder/{orderRequestId}`   | Obtains all the order details corresponding to the provided order request ID. |
+|    `POST`     |        `http://localhost:8082/orders/publish/order`            | Publishes the orderdetails to kafka and stores the details in Redis DB.       |
+|   `PATCH`     |     ` http://localhost:8082/orders/order/update/status`        | Update the order status in Kafka                                              | 
 
