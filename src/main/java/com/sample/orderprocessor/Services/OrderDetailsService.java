@@ -24,7 +24,7 @@ public class OrderDetailsService {
 	public Response saveOrder(Order order) {
 		try {
 			orderDetailsRepo.save(order);
-			logger.error("Saving order details with Order Request ID "+ 
+			logger.info("Saving order details with Order Request ID "+ 
 					order.getOrderStatus().getOrderRequestId()+ " success");
 			response.setMessage("Saved Order details Successfully");
 			response.setStatus("success");
